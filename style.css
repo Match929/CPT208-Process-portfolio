@@ -1,15 +1,21 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
   background: linear-gradient(120deg, #f7f8fb, #eef1f5);
   color: #1a1a1a;
+  line-height: 1.6;
 }
 
 /* 容器 */
 .container {
   width: 85%;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
   padding: 60px 0;
 }
 
@@ -18,7 +24,9 @@ body {
   font-size: 48px;
   font-weight: 800;
   letter-spacing: 2px;
+  text-align: center;
   margin-bottom: 40px;
+  color: #2d3748;
 }
 
 /* section标题 */
@@ -28,31 +36,75 @@ body {
   font-weight: 700;
   letter-spacing: 1px;
   text-align: center;
+  color: #2d3748;
 }
 
 /* HERO卡片 */
 .hero-card {
-  padding: 40px;
+  padding: 50px 40px;
   border-radius: 20px;
   background: linear-gradient(135deg, #667eea, #764ba2);
   color: white;
+  text-align: center;
   margin-bottom: 40px;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+}
+
+.hero-card h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+/* 通用网格布局 */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* 通用卡片样式 */
+.card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px 24px;
+  border: 1px solid rgba(255,255,255,0.6);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  transition: all 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 35px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 12px;
+}
+
+.card p {
+  font-size: 15px;
+  color: #4a5568;
+  margin-bottom: 8px;
 }
 
 /* 高亮数据 */
 .highlight {
   color: #ff8a00;
   font-weight: 600;
-  margin: 10px 0;
+  font-size: 16px !important;
 }
 
 /* 次要信息 */
 .muted {
-  color: #777;
-  font-size: 14px;
+  color: #777 !important;
+  font-size: 14px !important;
 }
 
-/* ====================== 团队卡片样式（同步完整版） ====================== */
+/* ====================== 团队卡片样式 ====================== */
 .team-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
