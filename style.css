@@ -1,167 +1,343 @@
+/* Base Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+:root {
+  --primary: #2ECCB2;
+  --primary-light: #f0fffc;
+  --dark: #1f2937;
+  --gray: #6b7280;
+  --light: #f9fafb;
+  --card-radius: 18px;
+  --shadow: 0 10px 30px rgba(0,0,0,0.06);
+  --transition: all 0.3s ease;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
-  background: linear-gradient(120deg, #f7f8fb, #eef1f5);
-  color: #1a1a1a;
+  background: #fff;
+  color: var(--dark);
   line-height: 1.6;
 }
 
-/* 容器 */
 .container {
-  width: 85%;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 60px 0;
+  padding: 0 22px;
 }
 
-/* 大标题 */
-.title {
-  font-size: 48px;
-  font-weight: 800;
-  letter-spacing: 2px;
-  text-align: center;
-  margin-bottom: 40px;
-  color: #2d3748;
+a {
+  text-decoration: none;
+  color: var(--dark);
+  transition: var(--transition);
 }
 
-/* section标题 */
-.section-title {
-  margin: 60px 0 30px;
-  font-size: 24px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-align: center;
-  color: #2d3748;
+a:hover {
+  color: var(--primary);
 }
 
-/* HERO卡片 */
-.hero-card {
-  padding: 50px 40px;
-  border-radius: 20px;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  color: white;
-  text-align: center;
-  margin-bottom: 40px;
-  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+/* Header */
+.header {
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.95);
+  z-index: 99;
 }
 
-.hero-card h2 {
-  font-size: 28px;
-  margin-bottom: 16px;
-}
-
-/* 通用网格布局 */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-}
-
-/* 通用卡片样式 */
-.card {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 30px 24px;
-  border: 1px solid rgba(255,255,255,0.6);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-  transition: all 0.35s ease;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 35px rgba(0,0,0,0.12);
-}
-
-.card h3 {
-  font-size: 18px;
-  font-weight: 700;
-  color: #2d3748;
-  margin-bottom: 12px;
-}
-
-.card p {
-  font-size: 15px;
-  color: #4a5568;
-  margin-bottom: 8px;
-}
-
-/* 高亮数据 */
-.highlight {
-  color: #ff8a00;
-  font-weight: 600;
-  font-size: 16px !important;
-}
-
-/* 次要信息 */
-.muted {
-  color: #777 !important;
-  font-size: 14px !important;
-}
-
-/* ====================== 团队卡片样式 ====================== */
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-}
-
-.member-card {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 32px 24px;
-  border: 1px solid rgba(255,255,255,0.6);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-  transition: all 0.35s ease;
-  text-align: center;
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 }
 
-/* 卡片悬浮效果 */
-.member-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 22px 40px rgba(0,0,0,0.13);
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--primary);
 }
 
-/* 团队成员头像 */
-.member-card img {
-  width: 140px;
-  height: 140px;
+.nav {
+  display: flex;
+  gap: 28px;
+  font-weight: 500;
+}
+
+/* Hero */
+.hero {
+  padding: 80px 0 100px;
+  background: linear-gradient(to bottom, #fff, var(--primary-light));
+}
+
+.hero-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-text {
+  flex: 1 1 400px;
+}
+
+.hero-text h2 {
+  font-size: 44px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.hero-desc {
+  font-size: 18px;
+  color: var(--gray);
+  margin-bottom: 26px;
+  max-width: 500px;
+}
+
+.tech-stack {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tech-stack span {
+  background: var(--primary-light);
+  color: var(--primary);
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hero-card {
+  flex: 1 1 400px;
+  position: relative;
+}
+
+.hero-card img {
+  width: 100%;
+  border-radius: var(--card-radius);
+  object-fit: cover;
+  height: 340px;
+  position: relative;
+  z-index: 2;
+}
+
+.card-shadow {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 100%;
+  height: 100%;
+  background: var(--primary);
+  opacity: 0.2;
+  border-radius: var(--card-radius);
+  z-index: 1;
+}
+
+/* Section */
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.section-sub {
+  text-align: center;
+  color: var(--gray);
+  max-width: 650px;
+  margin: 0 auto 50px;
+  font-size: 16px;
+}
+
+/* About */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.about-item {
+  background: #fff;
+  padding: 36px 26px;
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.about-item:hover {
+  transform: translateY(-6px);
+}
+
+.about-item i {
+  font-size: 36px;
+  color: var(--primary);
+  margin-bottom: 18px;
+}
+
+.about-item h4 {
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+.about-item p {
+  color: var(--gray);
+}
+
+/* Team */
+.team {
+  background: var(--light);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 26px;
+}
+
+.team-card {
+  background: #fff;
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  text-align: center;
+  padding-bottom: 20px;
+  transition: var(--transition);
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+}
+
+.team-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.team-card h4 {
+  margin-top: 14px;
+  font-size: 17px;
+}
+
+/* 成员职位样式 */
+.team-card p {
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ✅ 新增：成员ID专属样式（区分职位，更美观） */
+.team-id {
+  color: #888; /* 浅灰色，和职位颜色区分 */
+  font-size: 13px; /* 字号略小 */
+  font-weight: 500;
+  margin: 4px 0 8px; /* 微调上下间距 */
+}
+
+/* Features */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.feature-card {
+  background: #fff;
+  border-radius: var(--card-radius);
+  padding: 40px 30px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+}
+
+.feature-card i {
+  font-size: 40px;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.feature-card h4 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.feature-card p {
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+/* User Persona */
+.persona {
+  background: var(--light);
+}
+
+.persona-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 40px;
+}
+
+.persona-card {
+  background: #fff;
+  border-radius: var(--card-radius);
+  padding: 30px;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: var(--transition);
+}
+
+.persona-card:hover {
+  transform: translateY(-6px);
+}
+
+.persona-card img {
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 20px;
-  border: 4px solid #fff;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
 }
 
-/* 成员姓名 */
-.member-card h3 {
-  font-size: 20px;
-  font-weight: 700;
-  margin: 0 0 8px 0;
-  color: #2d3748;
+.persona-card h4 {
+  font-size: 17px;
+  margin-bottom: 6px;
 }
 
-/* 学号样式 */
-.member-card .student-id {
+.persona-card p {
+  color: var(--gray);
+  font-size: 15px;
+}
+
+/* Footer */
+.footer {
+  padding: 30px 0;
+  text-align: center;
+  background: #fff;
+  color: var(--gray);
   font-size: 14px;
-  color: #667eea;
-  font-weight: 600;
-  margin: 0 0 12px 0;
 }
 
-/* 成员简介 */
-.member-card .intro {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.6;
-  margin: 0;
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-text h2 {
+    font-size: 34px;
+  }
+  .nav {
+    gap: 16px;
+  }
 }

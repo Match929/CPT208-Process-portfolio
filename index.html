@@ -1,113 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>ClimbLink</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Climblink - Rock Climbing Social App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
-
 <body>
 
-<div class="container">
-
-  <!-- TITLE -->
-  <h1 class="title">CLIMBLINK</h1>
-
-  <!-- HERO -->
-  <div class="hero-card">
-    <h2>Welcome to Go Climbers</h2>
-    <p>
-      ClimbLink connects climbers through smart matching, community,
-      and real-time gym insights.
-    </p>
+<!-- Header -->
+<header class="header">
+  <div class="container">
+    <div class="navbar">
+      <h1 class="logo">Climblink</h1>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#team">Team</a>
+        <a href="#features">Features</a>
+        <a href="#user-persona">Users</a>
+      </nav>
+    </div>
   </div>
+</header>
 
-<!-- TEAM -->
-<section id="team">
-  <!-- 🔥 删掉了重复的 .container，这是布局错乱的根源！ -->
-  <h2 class="section-title">Our Team</h2>
-  <div class="team-grid">
-    <!-- Member 1 - Product -->
-    <div class="member-card">
-      <img src="assets/images/Kitagawa.jpg" alt="Xiangyu Zheng">
-      <h3>Xiangyu Zheng</h3>
-      <p class="student-id">ID: 2360671</p>
-      <p class="intro">html designer · Product · Sagittarius ♐ | Chief Procrastination Officer. Powered by caffeine and a relentless pursuit of the perfect playlist.</p>
+<!-- Hero -->
+<section class="hero">
+  <div class="container hero-row">
+    <div class="hero-text">
+      <h2>Connect. Climb. Belong.</h2>
+      <p class="hero-desc">
+        The one-stop platform for climbing partners, gym info, and community interaction.
+      </p>
+      <div class="tech-stack">
+        <span>Vue</span>
+        <span>Firebase</span>
+        <span>LBS</span>
+        <span>AI</span>
+      </div>
     </div>
-    <!-- Member 2 - Development -->
-    <div class="member-card">
-      <img src="https://picsum.photos/300/300?random=1" alt="Minghao Shen">
-      <h3>Minghao Shen</h3>
-      <p class="student-id">ID: 2360645</p>
-      <p class="intro">Development · Libra ⚖️ | Chief Overthinking Officer. Powered by curiosity and an endless debate between "this one" or "that one".</p>
-    </div>
-    <!-- Member 3 - Research -->
-    <div class="member-card">
-      <img src="https://picsum.photos/300/300?random=2" alt="Yifei Li">
-      <h3>Yifei Li </h3>
-      <p class="student-id">ID: 2361095</p>
-      <p class="intro">Research · Leo 🦁 | Chief Late-Night Officer. Powered by pure curiosity and chronic sleep deprivation.</p>
-    </div>
-    <!-- Member 4 - Design -->
-    <div class="member-card">
-      <img src="https://picsum.photos/300/300?random=3" alt="Junjie Zhu">
-      <h3>Junjie Zhu</h3>
-      <p class="student-id">ID: 2359942</p>
-      <p class="intro">Design · Chief Anxiety Officer (CAO), Janja Garnbret self-shipper.</p>
+    <div class="hero-card">
+      <div class="card-shadow"></div>
+      <img src="https://picsum.photos/id/26/600/400" alt="Climbing App">
     </div>
   </div>
 </section>
 
-  <!-- CORE NEEDS -->
-  <h2 class="section-title">CORE NEEDS</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>FIND THE RIGHT PARTNER</h3>
-      <p class="highlight">51.72% struggle to find partners</p>
-      <p>
-        84.48% care about availability and 79.31% about skill level.
-        ClimbLink enables precise matching based on time, level, and gym.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>BUILD REAL COMMUNITY</h3>
-      <p class="highlight">81% rely on existing contacts</p>
-      <p>
-        79.31% want structured communities. Move beyond fragmented chats
-        and build lasting climbing relationships.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>SMART GYM DECISIONS</h3>
-      <p class="highlight">89.66% need clear gym info</p>
-      <p>
-        Access real-time crowd levels, route difficulty, and community insights
-        to choose the right gym.
-      </p>
+<!-- About -->
+<section id="about" class="section about">
+  <div class="container">
+    <h3 class="section-title">About Climblink</h3>
+    <p class="section-sub">
+      A modern social platform built for climbers to meet, share, and explore together.
+    </p>
+    <div class="about-grid">
+      <div class="about-item">
+        <i class="fa-solid fa-people-group"></i>
+        <h4>Find Partners</h4>
+        <p>Smart matching for climbing buddies anytime, anywhere.</p>
+      </div>
+      <div class="about-item">
+        <i class="fa-solid fa-map-location-dot"></i>
+        <h4>Gym Directory</h4>
+        <p>All climbing gym information aggregated in one place.</p>
+      </div>
+      <div class="about-item">
+        <i class="fa-solid fa-comments"></i>
+        <h4>Community</h4>
+        <p>Share sends, tips, and stories with fellow climbers.</p>
+      </div>
     </div>
   </div>
+</section>
 
-  <!-- PERSONA -->
-  <h2 class="section-title">PERSONAS</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Emily · Beginner</h3>
-      <p>24 · Student</p>
-      <p>Needs beginner-friendly gyms and partners.</p>
-      <p class="muted">Pain: Doesn't know where to start</p>
-    </div>
+<!-- Team -->
+<section id="team" class="section team">
+  <div class="container">
+    <h3 class="section-title">Our Team</h3>
+    <p class="section-sub">4 passionate creators behind Climblink</p>
+    <div class="team-grid">
+  
+      <div class="team-card">
+        <img src="assets/images/Kitagawa.jpg">
+        <h4>Xiangyu Zheng</h4>
+        <p class="team-id">ID: 2360671</p>
+        <p>Founder & CEO</p>
+      </div>
 
-    <div class="card">
-      <h3>Jason · Intermediate</h3>
-      <p>29 · Designer</p>
-      <p>Climbs regularly and seeks stable partners.</p>
-      <p class="muted">Pain: Hard to find consistent partners</p>
+      <div class="team-card">
+        <img src="assets/images/Chloe.jpg">
+        <h4>Minghao Shen</h4>
+        <p class="team-id">ID: 2360645</p>
+        <p>Product Designer</p>
+      </div>
+
+      <div class="team-card">
+        <img src="assets/images/Ryan.jpg">
+        <h4>Yifei Li</h4>
+        <p class="team-id">ID: 2361095</p>
+        <p>Frontend Lead</p>
+      </div>
+
+      <div class="team-card">
+        <img src="assets/images/Luna.jpg">
+        <h4>Junjie Zhu</h4>
+        <p class="team-id">ID: 2359942</p>
+        <p>Community Manager</p>
+      </div>
     </div>
   </div>
+</section>
 
-</div>
+<!-- Features -->
+<section id="features" class="section features">
+  <div class="container">
+    <h3 class="section-title">Core Features</h3>
+    <p class="section-sub">Powerful tools built for climbers</p>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <i class="fa-solid fa-brain"></i>
+        <h4>AI Buddy Matching</h4>
+        <p>Smart algorithm matches you with ideal climbing partners based on level, location, and style.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fa-solid fa-building-columns"></i>
+        <h4>Gym Info Aggregation</h4>
+        <p>Real-time gym status, pricing, facilities, and user reviews all in one page.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fa-solid fa-users"></i>
+        <h4>Community Feed</h4>
+        <p>Share climbing sends, videos, events, and connect with the global community.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- User Persona -->
+<section id="user-persona" class="section persona">
+  <div class="container">
+    <h3 class="section-title">User Persona</h3>
+    <p class="section-sub">Who uses Climblink?</p>
+    <div class="persona-grid">
+      <div class="persona-card">
+        <img src="https://picsum.photos/id/1062/300/300" alt="User 1">
+        <h4>Mike, 26 • Intermediate Climber</h4>
+        <p>Wants to find consistent climbing partners near his area. Uses Climblink to match and schedule sessions.</p>
+      </div>
+      <div class="persona-card">
+        <img src="https://picsum.photos/id/1025/300/300" alt="User 2">
+        <h4>Sophie, 23 • Beginner</h4>
+        <p>New to climbing, looking for friendly partners and gym recommendations to learn safely.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 Climblink • All rights reserved</p>
+  </div>
+</footer>
 
 </body>
 </html>
