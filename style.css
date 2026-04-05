@@ -294,44 +294,113 @@ a:hover {
 .persona-card {
   background: #fff;
   border-radius: var(--card-radius);
-  padding: 30px;
+  padding: 32px;
   box-shadow: var(--shadow);
-  display: flex;
-  align-items: center;
-  gap: 20px;
   transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .persona-card:hover {
   transform: translateY(-6px);
 }
 
-.persona-card img {
+
+.persona-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 20px;
+}
+
+.persona-avatar {
   width: 90px;
   height: 90px;
   border-radius: 50%;
   object-fit: cover;
+  border: 3px solid var(--primary-light);
 }
 
-.persona-card h4 {
-  font-size: 17px;
+.persona-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--dark);
   margin-bottom: 6px;
 }
 
-.persona-card p {
-  color: var(--gray);
-  font-size: 15px;
+.persona-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
-/* Footer */
-.footer {
-  padding: 30px 0;
-  text-align: center;
-  background: #fff;
-  color: var(--gray);
+.persona-tag {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+/* 信息模块通用样式 */
+.persona-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.persona-section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.persona-section-content {
   font-size: 14px;
+  color: var(--gray);
+  line-height: 1.6;
+  padding-left: 4px;
 }
 
+.persona-section-content ul {
+  list-style-position: inside;
+  padding-left: 4px;
+}
+
+.persona-section-content li {
+  margin-bottom: 4px;
+}
+
+/* 简介模块 */
+.persona-bio {
+  font-size: 14px;
+  color: var(--dark);
+  font-style: italic;
+  background: var(--primary-light);
+  padding: 12px;
+  border-radius: 12px;
+  line-height: 1.6;
+}
+
+/* 响应式适配 */
+@media (max-width: 768px) {
+  .persona-grid {
+    grid-template-columns: 1fr;
+  }
+  .persona-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .persona-tags {
+    justify-content: center;
+  }
+}
 /* Responsive */
 @media (max-width: 768px) {
   .hero-text h2 {
