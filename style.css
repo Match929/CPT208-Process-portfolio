@@ -401,6 +401,213 @@ a:hover {
     justify-content: center;
   }
 }
+/* 👇 新增：User Journey Map 专属样式 */
+.journey {
+  background: var(--light);
+}
+
+.journey-stages {
+  display: flex;
+  margin-bottom: 40px;
+  gap: 0;
+}
+
+.stage {
+  flex: 1;
+  padding: 18px 12px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  position: relative;
+  clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
+  transition: var(--transition);
+}
+
+.stage:hover {
+  transform: translateY(-4px);
+}
+
+.stage:last-child {
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%);
+}
+
+.stage-awareness {
+  background: #43C58B;
+}
+
+.stage-consideration {
+  background: #66D3FA;
+  margin-left: -8px;
+}
+
+.stage-acquisition {
+  background: #A78BFA;
+  margin-left: -8px;
+}
+
+.stage-service {
+  background: #F44336;
+  margin-left: -8px;
+}
+
+.stage-loyalty {
+  background: #F9A857;
+  margin-left: -8px;
+}
+
+.journey-steps {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.step {
+  flex: 0 0 auto;
+  min-width: 90px;
+  max-width: 120px;
+  padding: 16px 10px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 13px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1.4;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: var(--transition);
+}
+
+.step:hover {
+  transform: translateY(-4px);
+}
+
+.step-awareness {
+  background: linear-gradient(135deg, #86F0C0 0%, #43C58B 100%);
+}
+
+.step-consideration {
+  background: linear-gradient(135deg, #66D3FA 0%, #4FB3D9 100%);
+}
+
+.step-acquisition {
+  background: linear-gradient(135deg, #B4A7FF 0%, #A78BFA 100%);
+}
+
+.step-service {
+  background: linear-gradient(135deg, #FF7058 0%, #F44336 100%);
+}
+
+.step-loyalty {
+  background: linear-gradient(135deg, #FFB773 0%, #F9A857 100%);
+}
+
+.journey-touchpoints {
+  position: relative;
+  padding: 30px 0;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.touchpoint-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #e5e7eb;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.touchpoint {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  z-index: 2;
+  margin: 0 18px;
+  vertical-align: top;
+}
+
+.tp-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin: 0 auto 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: var(--transition);
+}
+
+.tp-dot:hover {
+  transform: scale(1.1);
+}
+
+.tp-label {
+  font-size: 13px;
+  color: var(--dark);
+  font-weight: 500;
+  white-space: nowrap;
+  transform: rotate(-30deg);
+  display: inline-block;
+  transform-origin: bottom center;
+}
+
+.tp-awareness .tp-dot {
+  background: #43C58B;
+}
+
+.tp-consideration .tp-dot {
+  background: #66D3FA;
+}
+
+.tp-acquisition .tp-dot {
+  background: #A78BFA;
+}
+
+.tp-service .tp-dot {
+  background: #F44336;
+}
+
+.tp-loyalty .tp-dot {
+  background: #F9A857;
+}
+
+/* Journey 响应式适配 */
+@media (max-width: 768px) {
+  .journey-stages {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .stage {
+    clip-path: none !important;
+    margin-left: 0 !important;
+    border-radius: 8px;
+    font-size: 18px;
+  }
+
+  .journey-steps {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step {
+    width: 80%;
+    max-width: 300px;
+    min-width: auto;
+  }
+
+  .tp-label {
+    transform: rotate(0deg) !important;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .touchpoint {
+    margin: 0 10px;
+  }
+}
 
 /* Footer */
 .footer {
