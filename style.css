@@ -552,29 +552,59 @@ a:hover {
   position: relative;
   padding: 40px 0;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
+  flex-direction: column;
+  gap: 40px;
 }
-.touchpoint-line {
+
+/* 阶段触点容器 */
+.stage-touchpoints {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+}
+
+.stage-touchpoints::before {
+  content: '';
   position: absolute;
   top: 50%;
-  left: 5%;
-  right: 5%;
+  left: 10%;
+  right: 10%;
   height: 2px;
-  background: linear-gradient(90deg, #43C58B, #66D3FA, #A78BFA, #F44336, #F9A857);
+  background: linear-gradient(90deg, transparent, currentColor, transparent);
   transform: translateY(-50%);
   z-index: 1;
   border-radius: 1px;
 }
+
+.stage-touchpoints.awareness::before {
+  color: #43C58B;
+}
+
+.stage-touchpoints.consideration::before {
+  color: #66D3FA;
+}
+
+.stage-touchpoints.acquisition::before {
+  color: #A78BFA;
+}
+
+.stage-touchpoints.service::before {
+  color: #F44336;
+}
+
+.stage-touchpoints.loyalty::before {
+  color: #F9A857;
+}
+
 .touchpoint {
   text-align: center;
   position: relative;
   z-index: 2;
-  flex: 1 1 120px;
-  max-width: 150px;
+  flex: 0 0 120px;
 }
+
 .tp-dot {
   width: 40px;
   height: 40px;
@@ -588,6 +618,7 @@ a:hover {
   align-items: center;
   justify-content: center;
 }
+
 .tp-dot::before {
   content: '';
   position: absolute;
@@ -598,13 +629,16 @@ a:hover {
   transform: scale(0);
   transition: transform 0.3s ease;
 }
+
 .tp-dot:hover {
   transform: scale(1.2);
   box-shadow: 0 8px 25px rgba(0,0,0,0.3);
 }
+
 .tp-dot:hover::before {
   transform: scale(1.2);
 }
+
 .tp-label {
   font-size: 13px;
   color: var(--dark);
@@ -613,21 +647,27 @@ a:hover {
   line-height: 1.3;
   transition: color 0.3s ease;
 }
+
 .touchpoint:hover .tp-label {
   color: var(--primary);
 }
+
 .tp-awareness .tp-dot {
   background: linear-gradient(135deg, #43C58B, #2D956C);
 }
+
 .tp-consideration .tp-dot {
   background: linear-gradient(135deg, #66D3FA, #4A96C7);
 }
+
 .tp-acquisition .tp-dot {
   background: linear-gradient(135deg, #A78BFA, #8A69D5);
 }
+
 .tp-service .tp-dot {
   background: linear-gradient(135deg, #F44336, #C62828);
 }
+
 .tp-loyalty .tp-dot {
   background: linear-gradient(135deg, #F9A857, #E68A2E);
 }
@@ -652,11 +692,14 @@ a:hover {
     font-size: 13px;
   }
   .journey-touchpoints {
+    gap: 30px;
+  }
+  .stage-touchpoints {
     flex-direction: column;
     align-items: center;
-    gap: 24px;
+    gap: 16px;
   }
-  .touchpoint-line {
+  .stage-touchpoints::before {
     display: none;
   }
   .touchpoint {
