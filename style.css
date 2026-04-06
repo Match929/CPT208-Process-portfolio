@@ -401,18 +401,21 @@ a:hover {
     justify-content: center;
   }
 }
+
 /* User Journey Map */
+/* User Journey Map - 居中优化版 */
 .journey {
   background: var(--light);
 }
 
-/* 阶段条 */
+/* 阶段条 - 居中 */
 .journey-stages {
   display: flex;
   margin-bottom: 40px;
   gap: 12px;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center; /* 水平居中 */
+  align-items: center;     /* 垂直居中 */
 }
 .stage {
   padding: 14px 22px;
@@ -433,12 +436,15 @@ a:hover {
 .stage-service { background: #F44336; }
 .stage-loyalty { background: #F9A857; }
 
-/* 步骤卡片 */
+/* 步骤卡片 - 居中 */
 .journey-steps {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 16px;
   margin-bottom: 50px;
+  max-width: 900px; /* 限制最大宽度，避免太宽 */
+  margin-left: auto;
+  margin-right: auto; /* 水平居中 */
 }
 .step {
   padding: 16px 12px;
@@ -450,6 +456,7 @@ a:hover {
   line-height: 1.4;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   transition: var(--transition);
+  margin: 0 auto; /* 单个步骤居中 */
 }
 .step:hover {
   transform: translateY(-4px);
@@ -460,14 +467,16 @@ a:hover {
 .step-service { background: linear-gradient(135deg, #FF7058 0%, #F44336 100%); }
 .step-loyalty { background: linear-gradient(135deg, #FFB773 0%, #F9A857 100%); }
 
-/* 触点：网格布局 · 无滚动 · 高级版 */
+/* 触点：网格布局 · 无滚动 · 居中版 */
 .journey-touchpoints {
   position: relative;
   padding: 20px 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
   gap: 24px;
-  justify-items: center;
+  justify-items: center; /* 网格项水平居中 */
+  max-width: 1000px;    /* 限制最大宽度 */
+  margin: 0 auto;       /* 整体水平居中 */
 }
 .touchpoint-line {
   display: none; /* 去掉横线，更简洁 */
@@ -507,6 +516,9 @@ a:hover {
   }
   .stage {
     width: 80%;
+  }
+  .journey-steps, .journey-touchpoints {
+    max-width: 90%; /* 移动端适当缩小最大宽度 */
   }
 }
 /* Footer */
