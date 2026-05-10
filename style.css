@@ -237,12 +237,12 @@ a:hover {
   font-weight: 600;
 }
 
-/* ✅ 新增：成员ID专属样式（区分职位，更美观） */
+/* 成员ID专属样式 */
 .team-id {
-  color: #888; /* 浅灰色，和职位颜色区分 */
-  font-size: 13px; /* 字号略小 */
+  color: #888;
+  font-size: 13px;
   font-weight: 500;
-  margin: 4px 0 8px; /* 微调上下间距 */
+  margin: 4px 0 8px;
 }
 
 /* Features */
