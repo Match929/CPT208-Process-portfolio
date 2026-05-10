@@ -63,6 +63,7 @@ function App() {
                 </span>
                 <div className={`dropdown-menu ${isDropdownOpen ? 'open' : ''}`}>
                   <Link to="/prototype" className="dropdown-item cursor-target">Prototype Iteration & Design Thinking</Link>
+                  <Link to="/uted" className="dropdown-item cursor-target">UT & ED</Link>
                   <Link to="/smartpartner" className="dropdown-item cursor-target">SmartPartner Algorithm</Link>
                   <Link to="/usermanual" className="dropdown-item cursor-target">User Manual</Link>
                 </div>

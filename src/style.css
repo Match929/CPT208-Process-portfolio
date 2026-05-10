@@ -1248,3 +1248,295 @@ a:hover {
     gap: 16px;
   }
 }
+
+/* User Manual Page Styles */
+.proto-card {
+  padding: 24px;
+}
+
+.subsection {
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #eee;
+}
+
+.subsection:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.proto-subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a472a;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.proto-subsubtitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.proto-icon-green {
+  color: #2ECCB2;
+}
+
+.proto-icon-orange {
+  color: #FF6B35;
+}
+
+.proto-icon-purple {
+  color: #9B59B6;
+}
+
+.proto-icon-gray {
+  color: #999;
+}
+
+/* Info List */
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 15px;
+  color: #555;
+}
+
+.info-list li:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #1a472a;
+  min-width: 120px;
+  display: inline-block;
+}
+
+/* Objectives List */
+.objectives-list {
+  padding: 0 0 0 20px;
+  margin: 0;
+}
+
+.objectives-list li {
+  padding: 10px 0;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Scope List */
+.scope-list {
+  padding: 0 0 0 20px;
+  margin: 0;
+}
+
+.scope-list li {
+  padding: 8px 0;
+  font-size: 15px;
+  color: #555;
+}
+
+/* Criteria List */
+.criteria-list {
+  padding: 0 0 0 20px;
+  margin: 0;
+}
+
+.criteria-list li {
+  padding: 8px 0;
+  font-size: 15px;
+  color: #555;
+}
+
+/* Table Container */
+.table-container {
+  position: relative;
+  overflow-x: auto;
+  cursor: pointer;
+}
+
+.table-toggle {
+  display: none;
+  font-size: 13px;
+  color: #2ECCB2;
+  text-align: center;
+  padding: 8px 0;
+}
+
+@media (max-width: 768px) {
+  .table-toggle {
+    display: block;
+  }
+}
+
+/* Data Table */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  background: #fff;
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.data-table th {
+  background: #f8f9fa;
+  font-weight: 600;
+  color: #1a472a;
+  white-space: nowrap;
+}
+
+.data-table tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.data-table tbody tr:hover {
+  background: #f0f8f7;
+}
+
+.data-table-wide {
+  min-width: 800px;
+}
+
+/* Highlight Classes */
+.highlight-green {
+  font-weight: 700;
+  color: #2ECCB2;
+}
+
+.highlight-orange {
+  font-weight: 700;
+  color: #FF6B35;
+}
+
+.highlight-purple {
+  font-weight: 700;
+  color: #9B59B6;
+}
+
+/* Badge */
+.badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.badge-green {
+  background: rgba(46, 204, 178, 0.15);
+  color: #2ECCB2;
+}
+
+.badge-orange {
+  background: rgba(255, 107, 53, 0.15);
+  color: #FF6B35;
+}
+
+.badge-purple {
+  background: rgba(155, 89, 182, 0.15);
+  color: #9B59B6;
+}
+
+/* Indicator Description */
+.indicator-desc {
+  margin-top: 16px;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.indicator-desc p {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Failure Reasons */
+.failure-reasons ul {
+  padding: 0 0 0 20px;
+  margin: 0;
+}
+
+.failure-reasons li {
+  padding: 8px 0;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Conclusions List */
+.conclusions-list ul {
+  padding: 0 0 0 20px;
+  margin: 0;
+}
+
+.conclusions-list li {
+  padding: 12px 0;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* Proto Footer */
+.proto-footer {
+  background: #1a472a;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.proto-footer p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.proto-footer .footer-date {
+  opacity: 0.7;
+  font-size: 12px;
+}
+
+/* Responsive for User Manual */
+@media (max-width: 768px) {
+  .proto-card {
+    padding: 16px;
+  }
+  
+  .proto-subtitle {
+    font-size: 18px;
+  }
+  
+  .info-list li {
+    font-size: 14px;
+  }
+  
+  .info-label {
+    display: block;
+    margin-bottom: 4px;
+  }
+  
+  .data-table th,
+  .data-table td {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+}
