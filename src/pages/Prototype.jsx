@@ -1,5 +1,13 @@
 import React, { useState } from 'react';
 import '../style.css';
+import wireframeHome from '../assets/images/wireframe-home.png';
+import wireframeVenue from '../assets/images/wireframe-venue.png';
+import iteration1Comparison from '../assets/images/iteration1-comparison.png';
+import featureMarket from '../assets/images/feature-market.png';
+import featureSmartpartner from '../assets/images/feature-smartpartner.png';
+import featureBeginner from '../assets/images/feature-beginner.png';
+import featureRecords from '../assets/images/feature-records.png';
+import featureCreation from '../assets/images/feature-creation.png';
 
 const Prototype = () => {
   const [enlargedImage, setEnlargedImage] = useState(null);
@@ -46,21 +54,15 @@ const Prototype = () => {
 
           <div className="proto-grid proto-grid-2">
             <div className="proto-card">
-              <div className="proto-image-wrapper" onClick={() => setEnlargedImage({ src: null, alt: 'Home & Community Wireframe', caption: 'Initial Prototype – Home & Community Hand-Drawn Wireframes' })}>
-                <div className="proto-image-placeholder">
-                  <i className="fa-solid fa-image"></i>
-                  <span>Image 1: Home & Community Wireframe</span>
-                </div>
+              <div className="proto-image-wrapper" onClick={() => setEnlargedImage({ src: wireframeHome, alt: 'Home & Community Wireframe', caption: 'Initial Prototype – Home & Community Hand-Drawn Wireframes' })}>
+                <img src={wireframeHome} alt="Home & Community Wireframe" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <h4 className="proto-card-title">Home & Community</h4>
               <p className="proto-card-text">Initial wireframe exploring the home feed and community discussion board layout, establishing the social foundation of the platform.</p>
             </div>
             <div className="proto-card">
-              <div className="proto-image-wrapper" onClick={() => setEnlargedImage({ src: null, alt: 'Venue Page Wireframe', caption: 'Initial Prototype – Venue Page Hand-Drawn Wireframes' })}>
-                <div className="proto-image-placeholder">
-                  <i className="fa-solid fa-image"></i>
-                  <span>Image 2: Venue Page Wireframe</span>
-                </div>
+              <div className="proto-image-wrapper" onClick={() => setEnlargedImage({ src: wireframeVenue, alt: 'Venue Page Wireframe', caption: 'Initial Prototype – Venue Page Hand-Drawn Wireframes' })}>
+                <img src={wireframeVenue} alt="Venue Page Wireframe" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <h4 className="proto-card-title">Venue Discovery</h4>
               <p className="proto-card-text">Wireframe for the climbing gym directory and venue detail pages, designed to help users quickly find nearby gyms with essential information.</p>
@@ -90,11 +92,8 @@ const Prototype = () => {
           </p>
 
           <div className="proto-card proto-card-wide">
-            <div className="proto-image-wrapper proto-image-main" onClick={() => setEnlargedImage({ src: null, alt: 'Iteration 1 Comparison', caption: 'Iteration 1 – Hand-Drawn Wireframes → Basic Interactive Prototype' })}>
-              <div className="proto-image-placeholder">
-                <i className="fa-solid fa-image"></i>
-                <span>Image 3: Iteration 1 – Prototype vs. Wireframe Comparison</span>
-              </div>
+            <div className="proto-image-wrapper proto-image-main" onClick={() => setEnlargedImage({ src: iteration1Comparison, alt: 'Iteration 1 Comparison', caption: 'Iteration 1 – Hand-Drawn Wireframes → Basic Interactive Prototype' })}>
+              <img src={iteration1Comparison} alt="Iteration 1 Comparison" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
             <div className="proto-card-content">
               <h4 className="proto-card-title">Wireframe to Prototype Evolution</h4>
@@ -157,11 +156,8 @@ const Prototype = () => {
             <div className="proto-grid proto-grid-2">
               {/* Market */}
               <div className="proto-card" id="proto-market">
-                <div className="proto-image-wrapper" onClick={() => setEnlargedImage({ src: null, alt: 'Market Prototype', caption: 'New Feature – Secondhand Climbing Gear Marketplace' })}>
-                  <div className="proto-image-placeholder">
-                    <i className="fa-solid fa-image"></i>
-                    <span>Image 4: Market – Secondhand Gear Marketplace</span>
-                  </div>
+                <div className="proto-image-wrapper" onClick={() => setEnlargedImage({ src: featureMarket, alt: 'Market Prototype', caption: 'New Feature – Secondhand Climbing Gear Marketplace' })}>
+                  <img src={featureMarket} alt="Market Prototype" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
                 <div className="proto-tag proto-tag-orange">Priority Feature</div>
                 <h4 className="proto-card-title">Secondhand Marketplace</h4>
@@ -174,11 +170,8 @@ const Prototype = () => {
 
               {/* Smart Partner */}
               <div className="proto-card" id="proto-smartpartner">
-                <div className="proto-image-wrapper" onClick={() => setEnlargedImage({ src: null, alt: 'Smart Partner Prototype', caption: 'New Feature – Multi-Dimensional Climbing Partner Matching' })}>
-                  <div className="proto-image-placeholder">
-                    <i className="fa-solid fa-image"></i>
-                    <span>Image 5: Smart Partner – Intelligent Matching</span>
-                  </div>
+                <div className="proto-image-wrapper" onClick={() => setEnlargedImage({ src: featureSmartpartner, alt: 'Smart Partner Prototype', caption: 'New Feature – Multi-Dimensional Climbing Partner Matching' })}>
+                  <img src={featureSmartpartner} alt="Smart Partner Prototype" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
                 <div className="proto-tag proto-tag-purple">AI Feature</div>
                 <h4 className="proto-card-title">Smart Partner Matching</h4>
@@ -191,11 +184,8 @@ const Prototype = () => {
 
               {/* Beginner Guide */}
               <div className="proto-card" id="proto-beginner">
-                <div className="proto-image-wrapper" onClick={() => setEnlargedImage({ src: null, alt: 'Beginner Guide Prototype', caption: 'New Feature – Zero-Basis Climbing Beginner\'s Guide' })}>
-                  <div className="proto-image-placeholder">
-                    <i className="fa-solid fa-image"></i>
-                    <span>Image 6: Beginner Guide – Onboarding Page</span>
-                  </div>
+                <div className="proto-image-wrapper" onClick={() => setEnlargedImage({ src: featureBeginner, alt: 'Beginner Guide Prototype', caption: 'New Feature – Zero-Basis Climbing Beginner\'s Guide' })}>
+                  <img src={featureBeginner} alt="Beginner Guide Prototype" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
                 <div className="proto-tag proto-tag-green">Core Function</div>
                 <h4 className="proto-card-title">Beginner's Guide</h4>
@@ -204,11 +194,8 @@ const Prototype = () => {
 
               {/* Climb Records */}
               <div className="proto-card" id="proto-records">
-                <div className="proto-image-wrapper" onClick={() => setEnlargedImage({ src: null, alt: 'Climb Records Prototype', caption: 'New Feature – Climbing Growth Data Tracking' })}>
-                  <div className="proto-image-placeholder">
-                    <i className="fa-solid fa-image"></i>
-                    <span>Image 7: Climb Records – Progress Tracking</span>
-                  </div>
+                <div className="proto-image-wrapper" onClick={() => setEnlargedImage({ src: featureRecords, alt: 'Climb Records Prototype', caption: 'New Feature – Climbing Growth Data Tracking' })}>
+                  <img src={featureRecords} alt="Climb Records Prototype" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
                 <div className="proto-tag proto-tag-green">Core Function</div>
                 <h4 className="proto-card-title">Climb Records</h4>
@@ -217,11 +204,8 @@ const Prototype = () => {
 
               {/* Creation Tools */}
               <div className="proto-card proto-card-wide" id="proto-creation">
-                <div className="proto-image-wrapper" onClick={() => setEnlargedImage({ src: null, alt: 'Creation Tools Prototype', caption: 'New Feature – Community Content & Event Creation Tools' })}>
-                  <div className="proto-image-placeholder">
-                    <i className="fa-solid fa-image"></i>
-                    <span>Image 8: Post / Climb Request / Event Creation Pages</span>
-                  </div>
+                <div className="proto-image-wrapper" onClick={() => setEnlargedImage({ src: featureCreation, alt: 'Creation Tools Prototype', caption: 'New Feature – Community Content & Event Creation Tools' })}>
+                  <img src={featureCreation} alt="Creation Tools Prototype" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
                 <div className="proto-tag proto-tag-orange">Priority Feature</div>
                 <h4 className="proto-card-title">Creation Tools</h4>
