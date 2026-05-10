@@ -6,7 +6,7 @@ import Home from './pages/Home.jsx'
 import Prototype from './pages/Prototype.jsx'
 import ClimbLinkAlgorithmDocument from './pages/SmartPartner.jsx'
 import UserManual from './pages/UserManual.jsx'
-import UTED from './pages/UTED.jsx'
+import Experimentaldetails from './pages/Experimentaldetails.jsx'
 import './index.css'
 
 const router = createBrowserRouter([
@@ -32,7 +32,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'uted',
-        element: <UTED />
+        element: <Experimentaldetails />
       }
     ]
   }

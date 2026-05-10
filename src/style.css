@@ -1540,3 +1540,104 @@ a:hover {
     font-size: 13px;
   }
 }
+
+/* Experiment List Styles */
+.experiment-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experiment-list > li {
+  padding: 16px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.experiment-list > li:last-child {
+  border-bottom: none;
+}
+
+.experiment-list > li > strong {
+  color: #1a472a;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.experiment-list > li > ul {
+  padding-left: 24px;
+  margin: 8px 0;
+  list-style: disc;
+}
+
+.experiment-list > li > ul > li {
+  padding: 6px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.experiment-list-ordered {
+  counter-reset: experiment-counter;
+}
+
+.experiment-list-ordered > li {
+  counter-increment: experiment-counter;
+}
+
+.experiment-list-ordered > li::before {
+  content: counter(experiment-counter) ".";
+  font-weight: 700;
+  color: #2ECCB2;
+  margin-right: 12px;
+}
+
+/* Highlight Badge */
+.highlight-badge {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #FF6B35;
+  background: rgba(255, 107, 53, 0.1);
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-left: 12px;
+}
+
+/* Badge Orange */
+.badge-orange {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #FF6B35;
+  background: rgba(255, 107, 53, 0.15);
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+/* Responsive for Experiment Details */
+@media (max-width: 768px) {
+  .experiment-list > li {
+    font-size: 14px;
+    padding: 14px 0;
+  }
+  
+  .experiment-list > li > strong {
+    font-size: 15px;
+  }
+  
+  .experiment-list > li > ul > li {
+    font-size: 13px;
+  }
+  
+  .highlight-badge {
+    display: block;
+    margin-left: 0;
+    margin-top: 8px;
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+}
