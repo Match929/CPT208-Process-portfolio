@@ -1,4 +1,3 @@
-/* Base Reset */
 * {
   margin: 0;
   padding: 0;
@@ -55,7 +54,7 @@ a:hover {
 }
 
 .logo {
-  font-size: 26px;
+  font-size: 32px;
   font-weight: 700;
   color: var(--primary);
 }
@@ -64,15 +63,72 @@ a:hover {
   display: flex;
   gap: 28px;
   font-weight: 500;
+  align-items: center;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 280px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.dropdown-menu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  display: block;
+  padding: 14px 20px;
+  font-size: 14px;
+  color: var(--dark);
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-item:hover {
+  background: var(--primary-light);
+  color: var(--primary);
+  padding-left: 24px;
 }
 
 /* Hero */
 .hero {
   padding: 80px 0 100px;
   background: linear-gradient(to bottom, #fff, var(--primary-light));
+  position: relative;
 }
 
 .hero-row {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
@@ -80,12 +136,18 @@ a:hover {
   justify-content: space-between;
 }
 
+.hero-text,
+.hero-card {
+  position: relative;
+  z-index: 1;
+}
+
 .hero-text {
   flex: 1 1 400px;
 }
 
 .hero-text h2 {
-  font-size: 44px;
+  font-size: 56px;
   line-height: 1.2;
   margin-bottom: 20px;
   font-weight: 700;
@@ -146,7 +208,7 @@ a:hover {
 
 .section-title {
   text-align: center;
-  font-size: 32px;
+  font-size: 40px;
   margin-bottom: 12px;
   font-weight: 700;
 }
@@ -186,7 +248,7 @@ a:hover {
 }
 
 .about-item h4 {
-  font-size: 19px;
+  font-size: 22px;
   margin-bottom: 10px;
 }
 
@@ -227,22 +289,20 @@ a:hover {
 
 .team-card h4 {
   margin-top: 14px;
-  font-size: 17px;
+  font-size: 20px;
 }
 
-/* 成员职位样式 */
 .team-card p {
   color: var(--primary);
   font-size: 14px;
   font-weight: 600;
 }
 
-/* ✅ 新增：成员ID专属样式（区分职位，更美观） */
 .team-id {
-  color: #888; /* 浅灰色，和职位颜色区分 */
-  font-size: 13px; /* 字号略小 */
+  color: #888;
+  font-size: 13px;
   font-weight: 500;
-  margin: 4px 0 8px; /* 微调上下间距 */
+  margin: 4px 0 8px;
 }
 
 /* Features */
@@ -271,7 +331,7 @@ a:hover {
 }
 
 .feature-card h4 {
-  font-size: 20px;
+  font-size: 24px;
   margin-bottom: 12px;
 }
 
@@ -306,7 +366,6 @@ a:hover {
   transform: translateY(-6px);
 }
 
-/* 头像+姓名+标签 头部 */
 .persona-header {
   display: flex;
   align-items: center;
@@ -324,7 +383,7 @@ a:hover {
 }
 
 .persona-name {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 700;
   color: var(--dark);
   margin-bottom: 6px;
@@ -345,7 +404,6 @@ a:hover {
   color: var(--primary);
 }
 
-/* 信息模块通用样式 */
 .persona-section {
   display: flex;
   flex-direction: column;
@@ -377,7 +435,6 @@ a:hover {
   margin-bottom: 4px;
 }
 
-/* 简介模块 */
 .persona-bio {
   font-size: 14px;
   color: var(--dark);
@@ -388,7 +445,6 @@ a:hover {
   line-height: 1.6;
 }
 
-/* 响应式适配 */
 @media (max-width: 768px) {
   .persona-grid {
     grid-template-columns: 1fr;
@@ -401,6 +457,7 @@ a:hover {
     justify-content: center;
   }
 }
+
 /* User Journey Map */
 .journey {
   background: var(--light);
@@ -437,7 +494,6 @@ a:hover {
   z-index: 1;
 }
 
-/* 阶段条 */
 .journey-stages {
   display: flex;
   margin-bottom: 50px;
@@ -446,6 +502,7 @@ a:hover {
   justify-content: center;
   align-items: center;
 }
+
 .stage {
   padding: 16px 24px;
   text-align: center;
@@ -459,6 +516,7 @@ a:hover {
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
+
 .stage::before {
   content: '';
   position: absolute;
@@ -469,30 +527,36 @@ a:hover {
   background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
   transition: left 0.6s ease;
 }
+
 .stage:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
+
 .stage:hover::before {
   left: 100%;
 }
+
 .stage-awareness {
   background: linear-gradient(135deg, #43C58B, #2D956C);
 }
+
 .stage-consideration {
   background: linear-gradient(135deg, #66D3FA, #4A96C7);
 }
+
 .stage-acquisition {
   background: linear-gradient(135deg, #A78BFA, #8A69D5);
 }
+
 .stage-service {
   background: linear-gradient(135deg, #F44336, #C62828);
 }
+
 .stage-loyalty {
   background: linear-gradient(135deg, #F9A857, #E68A2E);
 }
 
-/* 步骤卡片 */
 .journey-steps {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -500,6 +564,7 @@ a:hover {
   margin-bottom: 60px;
   position: relative;
 }
+
 .step {
   padding: 20px 16px;
   border-radius: 14px;
@@ -514,6 +579,7 @@ a:hover {
   overflow: hidden;
   border: 1px solid rgba(255,255,255,0.2);
 }
+
 .step::before {
   content: '';
   position: absolute;
@@ -524,30 +590,36 @@ a:hover {
   background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
   transition: left 0.6s ease;
 }
+
 .step:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 12px 30px rgba(0,0,0,0.2);
 }
+
 .step:hover::before {
   left: 100%;
 }
+
 .step-awareness {
   background: linear-gradient(135deg, #86F0C0, #43C58B);
 }
+
 .step-consideration {
   background: linear-gradient(135deg, #66D3FA, #4FB3D9);
 }
+
 .step-acquisition {
   background: linear-gradient(135deg, #B4A7FF, #A78BFA);
 }
+
 .step-service {
   background: linear-gradient(135deg, #FF7058, #F44336);
 }
+
 .step-loyalty {
   background: linear-gradient(135deg, #FFB773, #F9A857);
 }
 
-/* 触点：现代连接线设计 */
 .journey-touchpoints {
   position: relative;
   padding: 40px 0;
@@ -556,7 +628,6 @@ a:hover {
   gap: 40px;
 }
 
-/* 阶段触点容器 */
 .stage-touchpoints {
   display: flex;
   flex-wrap: wrap;
@@ -672,7 +743,6 @@ a:hover {
   background: linear-gradient(135deg, #F9A857, #E68A2E);
 }
 
-/* 响应式 */
 @media (max-width: 768px) {
   .journey-stages {
     flex-direction: column;
@@ -715,7 +785,7 @@ a:hover {
     display: none;
   }
 }
-/* Footer */
+
 .footer {
   padding: 30px 0;
   text-align: center;
@@ -724,9 +794,14 @@ a:hover {
   font-size: 14px;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .hero-text h2 {
+    font-size: 42px;
+  }
+  .logo {
+    font-size: 28px;
+  }
+  .section-title {
     font-size: 34px;
   }
   .nav {
